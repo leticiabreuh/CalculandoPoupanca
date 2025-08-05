@@ -16,7 +16,7 @@ public class CalculoPoupanca {
 
         // PANEL DE CAMPOS (LABELS + TEXTFIELDS)
         JPanel camposPanel = new JPanel();
-        camposPanel.setLayout(new GridLayout(5, 7, 10, 10)); // 3 linhas, 2 colunas
+        camposPanel.setLayout(new GridLayout(5, 7, 10, 10)); // 5 linhas, 7 colunas
         camposPanel.setBackground(new Color(128, 128, 128));
 
         // LABELS E TEXTFIELDS
