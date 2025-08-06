@@ -12,11 +12,11 @@ public class ProgramaPoupanca{
         anos = scanner.nextInt();
         depositoMensal = scanner.nextDouble();
 
-        double juros = 0.05 /100;
+        double juros = 5.0 /100;
         qtdMeses = anos * 12;
         total = (depositoMensal * (Math.pow(1+juros, qtdMeses) - 1)) / juros;
 
-       System.out.printf("Total poupado R$: %.2f ",total);
+        System.out.printf("Total poupado R$: %.2f ",total);
 
 
     }
