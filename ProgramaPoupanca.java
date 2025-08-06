@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
-public class ProgramaPoupanca{
-    public static void main(String[]args){
-        Scanner scanner = new Scanner (System.in);
+public class ProgramaPoupanca {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        int anos;
-        double depositoMensal;
-        int qtdMeses;
-        double total;
+        CalculoPoupanca poupanca = new CalculoPoupanca();
 
-        anos = scanner.nextInt();
-        depositoMensal = scanner.nextDouble();
+        System.out.print("Digite os anos: ");
+        int anos = scanner.nextInt();
+        System.out.print("Digite o depósito mensal: ");
+        double deposito = scanner.nextDouble();
 
-        double juros = 5.0 /100;
-        qtdMeses = anos * 12;
-        total = (depositoMensal * (Math.pow(1+juros, qtdMeses) - 1)) / juros;
+        poupanca.setAnos(anos);
+        poupanca.setDepositoMensal(deposito);
 
-        System.out.printf("Total poupado R$: %.2f ",total);
+        double total = poupanca.calculoPoupanca();
 
+        System.out.printf("Total poupado R$: %.2f\n", total);
 
+        scanner.close();
     }
 }
