@@ -1,29 +1,22 @@
-impot java.util.Scanner;
+import java.util.Scanner;
 
-public class CalculoPoupanca{
+public class ProgramaPoupanca{
     public static void main(String[]args){
-        Scanner scanner = new Scanner (Systen.in);
+        Scanner scanner = new Scanner (System.in);
 
         int anos;
-        double juros;
         double depositoMensal;
-        int qtdAnos;
+        int qtdMeses;
         double total;
 
         anos = scanner.nextInt();
-        jurosMes = scanner.nextDouble();
         depositoMensal = scanner.nextDouble();
 
-        juros = 0.05 /100;
+        double juros = 0.05 /100;
         qtdMeses = anos * 12;
         total = (depositoMensal * (Math.pow(1+juros, qtdMeses) - 1)) / juros;
 
-       System.out.println("Total poupado R$: "+total);
-
-
-
-
-
+       System.out.printf("Total poupado R$: %.2f ",total);
 
 
     }
