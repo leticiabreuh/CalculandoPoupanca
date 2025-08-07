@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class CalculoPoupanca {
+public class TelaPoupanca {
     public static void main(String[] args) {
 
         // FRAME
@@ -47,13 +47,6 @@ public class CalculoPoupanca {
         button.setBackground(Color.WHITE);
         button.setForeground(Color.BLUE);
         button.setPreferredSize(new Dimension(150, 50));
-
-        button.addActionListener(e -> {
-            String mensagem = "Juros: " + field1.getText()
-                            + "\nAnos: " + field2.getText()
-                            + "\nDepósito: " + field3.getText();
-            JOptionPane.showMessageDialog(null, mensagem, "Informações", JOptionPane.INFORMATION_MESSAGE);
-        });
 
         // ADICIONA PAINÉIS AO FRAME
         panel.add(camposPanel, BorderLayout.CENTER);
